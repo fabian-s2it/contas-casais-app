@@ -99,20 +99,13 @@ function onError(error) {
           'message: ' + error.message + '\n');
 }
 
-
-
-
-
-
 $(document).ready(function(){
     $( "body" ).on( "swiperight", swiperightHandler );
     $( "body" ).on( "swipeleft", swipeleftHandler );
 
 
     $("#nova-transacao").click(function() {
-
         navigator.notification.vibrate(4000);
-
         $('#conteudo').load('pagina.html');
     });
 });

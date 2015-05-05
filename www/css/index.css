@@ -88,6 +88,11 @@ ul
     0 0.5em 0 0 black;
 }
 
+.user-icon-menu {
+    right:0;
+    position:absolute;
+}
+
 #header {
     width:100%;
     height:50px;
@@ -127,6 +132,10 @@ button {
     position: relative;
     display:table;
     text-align: left;
+}
+
+.transaction {
+    font-size:16px;
 }
 
 .btn-big-main:active {

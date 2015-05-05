@@ -3,17 +3,29 @@
 $.ajax
 ({
   type: "GET",
-  url: "http://127.0.0.1:2323/transactions/1",
+  url: "http://127.0.0.1:2323/transactions/3",
   headers: {
     "Authorization": "Basic " + btoa('fabian' + ":" + 'aaa')
   }
 })
 .done(function(data){
     alert('Authenticated!');
-    alert(data);
+    console.log(data);
+
+    for (var x = 0; x < data.length; x++) {
+    	var content = '<div class="btn-big-main transaction"><p><span>'+data[x].datetime + ' - ' + data[x].description + ' - R$ ' + data[x].amount +'</span></p>';
+    	$('#conteudo').append(content);
+    }
+
+
 })
 .fail(function(){
     alert('Error!')
 });
 
 </script>
+
+
+
+
+
