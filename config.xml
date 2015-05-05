@@ -59,11 +59,10 @@
     <gap:plugin name="org.apache.cordova.inappbrowser" />
     <gap:plugin name="org.apache.cordova.media" />
     <gap:plugin name="org.apache.cordova.network-information" />
+    <gap:plugin name="org.apache.cordova.notification" />
     <gap:plugin name="org.apache.cordova.splashscreen" />
     <gap:plugin name="org.apache.cordova.statusbar" />
     <gap:plugin name="org.apache.cordova.vibration" />
-    <gap:plugin name="Notification" value="org.apache.cordova.core.Notification" />
-    <gap:plugin name="Vibration" value="org.apache.cordova.core.Vibration" />
     <feature name="Device">
         <param name="ios-package" value="CDVDevice" />
     </feature>
