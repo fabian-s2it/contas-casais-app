@@ -1,0 +1,19 @@
+<script>
+
+$.ajax
+({
+  type: "GET",
+  url: "http://127.0.0.1:2323/transactions/1",
+  headers: {
+    "Authorization": "Basic " + btoa('fabian' + ":" + 'aaa')
+  }
+})
+.done(function(data){
+    alert('Authenticated!');
+    alert(data);
+})
+.fail(function(){
+    alert('Error!')
+});
+
+</script>

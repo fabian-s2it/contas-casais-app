@@ -1,0 +1,294 @@
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+
+
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+@font-face {
+    font-family: 'bariol_regularregular';
+    src: url('bariol_regular-webfont.eot');
+    src: url('bariol_regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('bariol_regular-webfont.woff2') format('woff2'),
+         url('bariol_regular-webfont.woff') format('woff'),
+         url('bariol_regular-webfont.ttf') format('truetype'),
+         url('bariol_regular-webfont.svg#bariol_regularregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    background-color:#E4E4E4;
+    background-attachment:fixed;
+    font-family:'bariol_regularregular', 'BariolRegular';
+    font-size:12px;
+    height:100%;
+    margin:0px;
+    padding:0px;
+    width:100%;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    padding-top:20px;
+}
+
+a, a:active, a:hover {
+    outline:0;
+    text-decoration: none;
+    color:#FFF;
+    text-shadow: 0 0px;
+}
+
+ul
+{
+    list-style-type: none;
+}
+
+
+.box-shadow-menu {
+  left:0;
+  margin-left:30px;
+  position: absolute;
+  padding-left: 1.25em;
+}
+
+.box-shadow-menu:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.25em;
+  width: 1em;
+  height: 0.15em;
+  background: black;
+  box-shadow: 
+    0 0.25em 0 0 black,
+    0 0.5em 0 0 black;
+}
+
+#header {
+    width:100%;
+    height:50px;
+    background-color:#009245;
+    text-align: center;
+    color:#fff;
+    padding-top:25px;
+    font-size:30px;
+}
+
+button {
+    border-radius: 0px;
+}
+
+#left-menu-ul {
+    padding: 0px 0px 0px 0px;
+}
+
+.fa {
+    margin-right:20px;
+}
+
+.left-menu-li {
+    width:100%;
+    height:40px;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+}
+
+.btn-big-main {
+    width:100%;
+    background-color:#D9D9D9;
+    height:100px;
+    font-size:24px;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    text-transform: uppercase;
+    position: relative;
+    display:table;
+    text-align: left;
+}
+
+.btn-big-main:active {
+    background-color: #444;
+}
+
+.btn-big-main p {
+    padding-left: 20px;
+    top: 50%; 
+    display: table-cell; 
+    vertical-align: middle;
+ }
+.btn-big-main span {
+    display:block; 
+    top: -50%;
+ }
+
+/* General styles for all menus */
+
+.cbp-spmenu {
+    background: #444;
+    position: fixed;
+    text-transform: uppercase;
+}
+
+.cbp-spmenu h3 {
+    color: #FFF;
+    font-size: 1.9em;
+    padding: 16.2px;
+    margin: 0;
+    font-weight: 300;
+    background: #444;
+}
+
+.cbp-spmenu a {
+    display: block;
+    color: #fff;
+    outline:0;
+    font-size: 1.1em;
+    font-weight: 0;
+    border:0px 0px 0px 0px;
+    text-decoration: none;
+    text-shadow: 0 1px 0 #444444;
+}
+
+.cbp-spmenu a:active {
+    background: #afdefa;
+    color: #47a3da;
+}
+
+/* Orientation-dependent styles for the content of the menu */
+
+.cbp-spmenu-vertical {
+    width: 240px;
+    height: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.menu-shadow {
+    -webkit-box-shadow: 8px 0px 17px -1px rgba(0,0,0,0.41);
+    -moz-box-shadow: 8px 0px 17px -1px rgba(0,0,0,0.41);
+    box-shadow: 8px 0px 17px -1px rgba(0,0,0,0.41);
+}
+
+.cbp-spmenu-vertical a {
+    color:#FFF;
+    padding: 1em;
+}
+
+.cbp-spmenu-horizontal {
+    width: 100%;
+    height: 150px;
+    left: 0;
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.cbp-spmenu-horizontal h3 {
+    height: 100%;
+    width: 20%;
+    float: left;
+}
+
+.cbp-spmenu-horizontal a {
+    float: left;
+    width: 20%;
+    padding: 0.8em;
+    border-left: 1px solid #258ecd;
+}
+
+/* Vertical menu that slides from the left or right */
+
+.cbp-spmenu-left {
+    left: -240px;
+}
+
+.cbp-spmenu-left.cbp-spmenu-open {
+    left: 0px;
+}
+
+/* Push classes applied to the body */
+
+.cbp-spmenu-push {
+    overflow-x: hidden;
+    position: relative;
+    left: 0;
+}
+
+.cbp-spmenu-push-toright {
+    left: 240px;
+}
+
+.cbp-spmenu-push-toleft {
+    left: -240px;
+}
+
+/* Transitions */
+
+.cbp-spmenu,
+.cbp-spmenu-push {
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+/* Example media queries */
+
+@media screen and (max-width: 55.1875em){
+
+    .cbp-spmenu-horizontal {
+        font-size: 55%;
+        height: 110px;
+    }
+
+    .cbp-spmenu-top {
+        top: -110px;
+    }
+
+    .cbp-spmenu-bottom {
+        bottom: -110px;
+    }
+
+}
+
+@media screen and (max-height: 26.375em){
+
+    .cbp-spmenu-vertical {
+        font-size: 90%;
+        width: 190px;
+    }
+
+    .cbp-spmenu-left,
+    .cbp-spmenu-push-toleft {
+        left: -190px;
+    }
+
+    .cbp-spmenu-right {
+        right: -190px;
+    }
+
+    .cbp-spmenu-push-toright {
+        left: 190px;
+    }
+}
